@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Contact Us</title>
+		<link rel="stylesheet" href="{% static 'css/review.css' %}" />
+	</head>
+	<body>
+		<div class="centered-content">
+			<h2>Contact Us</h2>
+			<form method="POST">
+				{% csrf_token %} 
+				{{ form.as_p }}
+				<button type="submit" style="align-items: center; padding: 15px 30px; margin-left: 5.5rem; font-size: 16px;">Submit</button>
+			</form>
+		</div>
+	</body>
+</html>
